@@ -11,7 +11,8 @@ const key = new Uint8Array([
     166, 211, 159, 140, 90,  46, 123, 64
   ]);
 
-const cipher = crypto.createCipheriv('aes-256-ctr', key, Buffer.alloc(16));
+const ivKey = Buffer.from(`${inputFile}`, 'hex');
+const cipher = crypto.createCipheriv('aes-256-ctr', key, ivKey);
 
 const inputStream = fs.createReadStream(inputFile);
 const outputStream = fs.createWriteStream(outputFile);
