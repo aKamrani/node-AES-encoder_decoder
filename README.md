@@ -10,4 +10,4 @@ IV is name of Input file in HEX.
 ### Decrypt:
 ```node decrypt.js encrypted.dat output.mp4```
 
-ejnjoy ;) 
+enjoy ;) 
