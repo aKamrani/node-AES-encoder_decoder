@@ -12,7 +12,8 @@ const key = new Uint8Array([
     166, 211, 159, 140, 90,  46, 123, 64
   ]);
 
-const ivKey = Buffer.from('05e1044cea8ebff6e22451a32164937b.dat', 'hex');
+
+const ivKey = Buffer.from(`${inputFile}`, 'hex');
 const decipher = crypto.createDecipheriv('aes-256-ctr', key, ivKey);
 
 const inputStream = fs.createReadStream(inputFile);
